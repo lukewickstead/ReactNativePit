@@ -66,6 +66,7 @@ class NasaPictureOfTheDay extends Component {
       putDisplayNasaPictureOfTheDayExplanationHandler,
       resetNasaPictureOfTheDayErrorHandler,
     } = this.props;
+
     const {url, date, hdurl, title, media_type, explanation} = this.props.data;
 
     return (

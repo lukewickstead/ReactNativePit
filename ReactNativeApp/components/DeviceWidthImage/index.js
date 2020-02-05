@@ -6,9 +6,7 @@ function DeviceWidthImage({url}) {
   const win = Dimensions.get('window');
   var styles = StyleSheet.create({
     container: {
-      alignSelf: 'center',
-      flex: 1,
-      height: win.height,
+      height: win.height * 0.85,
       width: win.width,
     },
   });
