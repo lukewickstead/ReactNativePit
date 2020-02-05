@@ -1,12 +1,20 @@
-import React, { Component } from 'react';
-import { Text, View } from 'react-native';
+import React, {Component} from 'react';
+import {View} from 'react-native';
+
+import {Provider} from 'react-redux';
+
+import NasaPictureOfTheDay from './containers/NasaPictureOfTheDay';
+
+import configureStore from './store/configureStore';
+const store = configureStore();
 
 export default class HelloWorldApp extends Component {
   render() {
-
     return (
-      <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-        <Text>Hello, world!</Text>
+      <View>
+        <Provider store={store}>
+          <NasaPictureOfTheDay />
+        </Provider>
       </View>
     );
   }
